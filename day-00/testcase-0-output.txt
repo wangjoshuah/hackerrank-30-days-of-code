@@ -1,2 +1,2 @@
 Hello, World.
-Welcome to 30 Days of Code!j
+Welcome to 30 Days of Code!
