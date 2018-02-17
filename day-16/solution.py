@@ -5,5 +5,3 @@ try:
     print(integer_value)
 except ValueError:
     print('Bad String')
-
-
