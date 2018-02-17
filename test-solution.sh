@@ -11,7 +11,7 @@ TEST_NUM=0
 for TEST_INPUT in $TEST_INPUTS
 do
     ACTUAL_OUTPUT=$(cat $TEST_INPUT | python3 solution.py)
-    TEST_DIFF=$(diff <(echo "$ACTUAL_OUTPUT") test-$TEST_NUM-output.txt)
+    TEST_DIFF=$(diff -w <(echo "$ACTUAL_OUTPUT") test-$TEST_NUM-output.txt)
 
     if [ $? -ne "0" ]; then
         echo "Test $TEST_NUM FAILED"
