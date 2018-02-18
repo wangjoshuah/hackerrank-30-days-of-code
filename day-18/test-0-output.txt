@@ -1,0 +1,1 @@
+The word, racecar, is a palindrome.

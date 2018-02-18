@@ -1,0 +1,1 @@
+The word, yes, is not a palindrome.
