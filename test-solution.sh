@@ -5,12 +5,26 @@ read TEST_DIR
 
 cd $TEST_DIR
 
-# TODO: Test multiple test cases
+SOLUTION_LANGUAGE=python
+
+# check if solution class is java or python
+if [ -e Solution.java ]
+then
+    javac Solution.java
+    SOLUTION_LANGUAGE=java
+fi
+
 TEST_INPUTS=$(find . -name "test-*-input.txt")
 TEST_NUM=0
 for TEST_INPUT in $TEST_INPUTS
 do
-    ACTUAL_OUTPUT=$(cat $TEST_INPUT | python3 solution.py)
+    if [ $SOLUTION_LANGUAGE == java ]
+    then
+        ACTUAL_OUTPUT=$(cat $TEST_INPUT | java Solution)
+    elif [ $SOLUTION_LANGUAGE == python ]
+    then
+        ACTUAL_OUTPUT=$(cat $TEST_INPUT | python3 solution.py)
+    fi
     TEST_DIFF=$(diff -w <(echo "$ACTUAL_OUTPUT") test-$TEST_NUM-output.txt)
 
     if [ $? -ne "0" ]; then
