@@ -1,0 +1,3 @@
+16
+8.0
+HackerRank is the best place to learn and practice coding!
