@@ -12,14 +12,13 @@ class Solution:
             current = current.next
 
     def insert(self, head, data):
+        newNode = Node(data)
         if not head:
-            head = Node(data)
-        else:
-            current = head
-            while current.next:
-                current = current.next
-            tail = Node(data)
-            current.next = tail
+            return newNode
+        current = head
+        while current.next:
+            current = current.next
+        current.next = newNode
         return head
 
 
