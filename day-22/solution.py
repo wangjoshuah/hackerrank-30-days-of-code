@@ -19,7 +19,7 @@ class Solution:
 
     def getHeight(self, root):
         if not root:
-            return 0
+            return -1
         elif not root.left and not root.right:
             return 0
         left_height = self.getHeight(root.left)
