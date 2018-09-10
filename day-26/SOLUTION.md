@@ -1,4 +1,4 @@
-# Day 25: Nested Logic
+# Day 26: Nested Logic
 
 ## Objective
 Today we're being challenged on nested conditional statements. Check out day 3's video if you aren't familiar with conditional statements.
@@ -30,7 +30,7 @@ Print a single integer denoting the library fine for the book received as input.
 
 We have 4 states we could be in. There is no due date, the book is a few days late, the book is months late, or the book is a year late. There are also 3 categories we are checking based on--year, month, and date. We are going to nest our conditional statements since a year contains months and a month contains days. 
 
-We will first check if the book is returned in a previous year, the same year, or a later year. If the book was returned in a previous year than the due date, then we do not need to pay a fine. If the book was returned in the same year as the due date, we will need to check month and date. Otherwise, if the book was returned in a year after the due date, we will print 10000. 
+We will first check if the book is returned in a previous year, the same year, or a later year. If the book was returned in a previous year than the due year, then we do not need to pay a fine. If the book was returned in the same year as the due year, we will need to check month and date. Otherwise, if the book was returned in a year after the due year, we will print 10000. 
 
 In the case that the book was returned in the same calendar year as the due date, we need to check the month and day. First we check if the book was returned in a previous month, if so, we do not need to pay a fine. If the book was returned in the same calendar month, then we need to check the day. Otherwise the fine is the number of months behind the book was multiplied by 500. 
 
