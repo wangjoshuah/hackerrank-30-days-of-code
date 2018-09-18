@@ -1,0 +1,1 @@
+Dummy input provided, as this is unit testing problem only. If you don't see any errors and exceptions thrown, then you code runs correctly.
